@@ -21,9 +21,10 @@ app.get('/products', async (_req, res) => {
 app.get('/products/:id', async (req, res) => {
   const { id } = req.params;
   const [[result]] = await conn.execute(
-    'SELECT * FROM StoreManager.products WHERE id = ? ORDER BY id', [id]);
+    'SELECT * FROM StoreManager.products WHERE id = ? ORDER BY id', [id],
+  );
   if (!result) {
-    res.status(404).json({ message: "Product not found" });  
+    res.status(404).json({ message: 'Product not found' });  
   } else {
     res.status(200).json(result);  
   }
