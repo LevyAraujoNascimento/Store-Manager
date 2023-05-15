@@ -22,7 +22,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2023-05-12T17:21:21.339Z",
-    "modified": "2023-05-13T13:40:45.525Z",
+    "modified": "2023-05-15T17:23:00.292Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -36,12 +36,31 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2023-05-15T12:09:57.742Z",
-    "modified": "2023-05-15T13:11:49.525Z",
+    "modified": "2023-05-15T17:01:12.337Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \n}",
+      "raw": "{\n  \"name\": \"Bow and Arrow\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "30897306-7d1b-4a50-a1ab-5125b7e06514",
+    "colId": "history",
+    "containerId": "",
+    "name": "New Sale",
+    "url": "http://localhost:3001/sales/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-15T16:13:44.315Z",
+    "modified": "2023-05-15T18:33:38.769Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "[\n  {\n    \"productId\": 1\n  },\n  {\n    \"productId\": 2,\n    \"quantity\": 5\n  }\n]",
       "form": []
     },
     "tests": []
