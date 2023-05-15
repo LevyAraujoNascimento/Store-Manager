@@ -26,5 +26,24 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "501f6df8-d68a-4c48-8671-2613cb586fd7",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://www.thunderclient.com/welcome",
+    "url": "http://localhost:3001/products/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-05-15T12:09:57.742Z",
+    "modified": "2023-05-15T12:11:28.643Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Iron man\"\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]
