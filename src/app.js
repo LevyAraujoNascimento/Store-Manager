@@ -1,5 +1,6 @@
 const express = require('express');
 const productsController = require('./controllers/products.controller');
+const validName = require('./middlewares/nameValidation');
 
 const app = express();
 app.use(express.json());
@@ -17,6 +18,6 @@ app.get('/products', productsController.listAllProducts);
 
 app.get('/products/:id', productsController.listProductsByID);
 
-app.post('/products', productsController.newProduct);
+app.post('/products', validName, productsController.newProduct);
 
 module.exports = app;
