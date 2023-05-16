@@ -23,6 +23,8 @@ app.get('/products/:id', productsController.listProductsByID);
 
 app.post('/products', validName, productsController.newProduct);
 
+app.put('/products/:id', validName, productsController.updateProduct);
+
 app.get('/sales', salesController.listAllSales);
 
 app.get('/sales/:id', salesController.listSalesByID);

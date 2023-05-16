@@ -92,5 +92,24 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "6a191af1-0ccd-4e30-b63a-14903027ffad",
+    "colId": "history",
+    "containerId": "",
+    "name": "Att a product",
+    "url": "http://localhost:3001/products/6",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-05-16T12:11:40.959Z",
+    "modified": "2023-05-16T13:43:35.025Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Martelo do Batman\"\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]
