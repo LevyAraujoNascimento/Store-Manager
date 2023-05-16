@@ -53,8 +53,15 @@ const listByID = async (id) => {
   return result;
 };
 
+const deleteSale = async (id) => {
+  await conn.execute(
+    'DELETE FROM StoreManager.sales WHERE id = ?;', [id],
+  );
+};
+
 module.exports = {
   createSale,
   listAll,
   listByID,
+  deleteSale,
 };

@@ -19,8 +19,18 @@ const listByID = async (id) => {
   return { type: null, message: sale };
 };
 
+const deleteSale = async (id) => {
+  const error = schema.validateId(id);
+  if (error.type) return error;
+  const sale = await salesModel.listByID(id);
+  if (!sale || sale.length === 0) return { type: 'SALE_NOT_FOUND', message: 'Sale not found' };
+  await salesModel.deleteSale(id);
+  return { type: null };
+};
+
 module.exports = {
   createSale,
   listAll,
   listByID,
+  deleteSale,
 };

@@ -33,4 +33,6 @@ app.get('/sales/:id', salesController.listSalesByID);
 
 app.post('/sales', validProductId, validQuant, salesController.newSale);
 
+app.delete('/sales/:id', salesController.deleteSale);
+
 module.exports = app;
