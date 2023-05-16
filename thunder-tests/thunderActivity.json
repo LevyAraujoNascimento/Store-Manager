@@ -111,5 +111,19 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "55ec6c4a-249a-4e18-94bf-1d5a57a74adb",
+    "colId": "history",
+    "containerId": "",
+    "name": "Delete a product",
+    "url": "http://localhost:3001/products/3",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2023-05-16T14:08:47.148Z",
+    "modified": "2023-05-16T15:48:31.587Z",
+    "headers": [],
+    "params": [],
+    "tests": []
   }
 ]
