@@ -13,7 +13,13 @@ const products = [
   },
 ];
 
+const newProducts = {
+    "id": 4,
+    "name": "Espada do Blade"
+};
+
 
 module.exports = {
   products,
+  newProducts,
 };
