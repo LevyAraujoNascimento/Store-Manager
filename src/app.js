@@ -23,6 +23,10 @@ app.get('/products/:id', productsController.listProductsByID);
 
 app.post('/products', validName, productsController.newProduct);
 
+app.get('/sales', salesController.listAllSales);
+
+app.get('/sales/:id', salesController.listSalesByID);
+
 app.post('/sales', validProductId, validQuant, salesController.newSale);
 
 module.exports = app;
