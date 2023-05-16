@@ -17,6 +17,8 @@ app.get('/', (_request, response) => {
 // você pode registrar suas rotas normalmente, como o exemplo acima
 // você deve usar o arquivo index.js para executar sua aplicação 
 
+app.get('/products/search', productsController.searchProducts);
+
 app.get('/products', productsController.listAllProducts);
 
 app.get('/products/:id', productsController.listProductsByID);
@@ -32,6 +34,8 @@ app.get('/sales', salesController.listAllSales);
 app.get('/sales/:id', salesController.listSalesByID);
 
 app.post('/sales', validProductId, validQuant, salesController.newSale);
+
+//app.put('/sales/:id', validProductId, validQuant, salesController.updateSale);
 
 app.delete('/sales/:id', salesController.deleteSale);
 

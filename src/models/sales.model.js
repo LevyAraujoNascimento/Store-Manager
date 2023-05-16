@@ -59,9 +59,16 @@ const deleteSale = async (id) => {
   );
 };
 
+const updateSale = async (id, newItemsSold) => {
+  await deleteSale(id);
+  const result = await createSale(newItemsSold);
+  return result;
+};
+
 module.exports = {
   createSale,
   listAll,
   listByID,
   deleteSale,
+  updateSale,
 };
