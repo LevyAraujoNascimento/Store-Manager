@@ -58,7 +58,28 @@ describe('Teste de unidade do productsController', function () {
       expect(res.json).to.have.been.calledWith(products[0]);
     });
   });
+  /*
+  describe('Deletando um produto', function () {
 
+    it('deve responder com 204 quando deletar', async function () {
+      // Arrange
+      const res = {};
+      const req = {
+        params: { id: 1 },
+      };
+      res.status = sinon.stub().returns(res);
+      res.json = sinon.stub().returns();
+      sinon
+        .stub(productsService, 'deleteProduct')
+        .resolves({ type: null });
+      // Act
+      await productsController.deleteProduct(req, res);
+      // Assert
+      expect(res.status).to.have.been.calledWith(204);
+      
+    });
+  });
+  */
   afterEach(function () {
     sinon.restore();
   });

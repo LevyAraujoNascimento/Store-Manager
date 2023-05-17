@@ -18,8 +18,20 @@ const newProducts = {
     "name": "Espada do Blade"
 };
 
+const deletedProducts = [
+  {
+    "id": 2,
+    "name": "Traje de encolhimento"
+  },
+  {
+    "id": 3,
+    "name": "Escudo do Capitão América"
+  },
+];
+
 
 module.exports = {
   products,
   newProducts,
+  deletedProducts,
 };
