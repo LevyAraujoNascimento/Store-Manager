@@ -145,13 +145,18 @@
     "colId": "history",
     "containerId": "",
     "name": "Att a sale",
-    "url": "http://localhost:3001/products/6",
+    "url": "http://localhost:3001/sales/6",
     "method": "PUT",
     "sortNum": 0,
     "created": "2023-05-16T17:24:49.646Z",
-    "modified": "2023-05-16T17:24:49.646Z",
+    "modified": "2023-05-17T13:49:39.708Z",
     "headers": [],
     "params": [],
+    "body": {
+      "type": "json",
+      "raw": "[\n  {\n    \"productId\": 1,\n    \"quantity\": 500\n  },\n  {\n    \"productId\": 2,\n    \"quantity\": 600\n  }\n]",
+      "form": []
+    },
     "tests": []
   },
   {

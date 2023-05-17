@@ -3,7 +3,7 @@ const sinon = require('sinon');
 const { productsService } = require('../../../src/services');
 const { productsModel } = require('../../../src/models');
 
-const { allProducts } = require('./mocks/products.service.mock');
+const { allProducts, newProduct } = require('./mocks/products.service.mock');
 
 describe('Verificando service de Products', function () {
   describe('listando todas as pessoas:', function () {
@@ -49,6 +49,19 @@ describe('Verificando service de Products', function () {
       // assert
       expect(result.type).to.equal(null);
       expect(result.message).to.deep.equal(allProducts[0]);
+    });
+  });
+
+  describe('Criando um produto', function () {
+
+    it('retorna o produto criado', async function () {
+      // arrange
+      sinon.stub(productsModel, 'createProduct').resolves(newProduct);
+      // act
+      const result = await productsService.createProduct('Espada do Blade');
+      // assert
+      expect(result.type).to.equal(null);
+      expect(result.message).to.deep.equal(newProduct);
     });
   });
 

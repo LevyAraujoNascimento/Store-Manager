@@ -28,19 +28,9 @@ const deleteSale = async (id) => {
   return { type: null };
 };
 
-const updateSale = async (id, newItemsSold) => {
-  const error = schema.validateId(id);
-  if (error.type) return error;
-  const sale = await salesModel.listByID(id);
-  if (!sale || sale.length === 0) return { type: 'SALE_NOT_FOUND', message: 'Sale not found' };
-  const newSale = await salesModel.updateSale(newItemsSold);
-  return { type: null, message: newSale };
-};
-
 module.exports = {
   createSale,
   listAll,
   listByID,
   deleteSale,
-  updateSale,
 };
