@@ -58,7 +58,29 @@ describe('Teste de unidade do productsController', function () {
       expect(res.json).to.have.been.calledWith(products[0]);
     });
   });
+
   /*
+  describe('Buscando um produto por termo', function () {
+
+    it('deve responder com 200 e os dados do banco quando existir', async function () {
+      // Arrange
+      const res = {};
+      const req = {
+        query: { q: 'Martelo' },
+      };
+      res.status = sinon.stub().returns(res);
+      res.json = sinon.stub().returns();
+      sinon
+        .stub(productsService, 'searchProducts')
+        .resolves({ type: null, message: products[0] });
+      // Act
+      await productsController.listProductsByID(req, res);
+      // Assert
+      expect(res.status).to.have.been.calledWith(200);
+      expect(res.json).to.have.been.calledWith(products[0]);
+    });
+  });
+
   describe('Deletando um produto', function () {
 
     it('deve responder com 204 quando deletar', async function () {
